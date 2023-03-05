@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/basic}">
+<body>
+<div layout:fragment="content">
+
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Bienvenido a su plataforma de Gestión!</h1>
+                    <p class="lead mb-0">Empiece a gestionar sus proyectos</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#"><img class="card-img-top" th:src="@{'https://www.grandespymes.com.ar/wp-content/uploads/2016/07/gestion.edsd_.jpg'}" alt="..." /></a>
+                        <div class="card-body">
+<!--                            <div class="small text-muted">Agosto, 2022</div>-->
+                            <h2 class="card-title">Gestor de proyectos</h2>
+<!--                            <p class="card-text">Este es un ejemplo para la vista de un proyecto</p>-->
+<!--                            <a class="btn btn-primary" href="#">Leer más →</a>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Menú</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Ver</li>
+                                        <li><a th:href="@{/proyectos}">Proyectos</a></li>
+                                        <li><a th:href="@{/usuarios}">Usuarios</a></li>
+                                        <li><a th:href="@{/roles}">Roles</a></li>
+                                        <li><a th:href="@{/permisos}">Permisos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Crear</li>
+                                        <li><a th:href="@{/proyectos/nuevo}">Nuevo Proyecto</a></li>
+                                        <li><a th:href="@{/usuarios/nuevo}">Nuevo Usuario</a></li>
+                                        <li><a th:href="@{/roles/nuevo}">Nuevo Rol</a></li>
+                                        <li><a th:href="@{/permisos/nuevo}">Nuevo Permiso</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
